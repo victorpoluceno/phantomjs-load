@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Test</title>
+    </head>
+<body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://stevie.eventials.com/application.js"></script>
+    <script>
+        $(document).ready(function() {
+            var jug = new Juggernaut({'host': 'stevie.eventials.com', 'port': 80, 'transports': ['xhr-polling', 'websocket', 'flashsocket']});
+            jug.subscribe('M2UzZTJkMzY2MzdiNTg2NTUxNWM1MzI3NWY1YjRhMzYjIzExMDU_3D', function(data) {
+                console.log(data.page);
+            });
+        });
+    </script>
+</body>
+</html>
